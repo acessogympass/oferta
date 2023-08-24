@@ -7,6 +7,56 @@
 	
 <!-- Conteúdo da sua página aqui -->
 
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  /* Estilo para o botão */
+  .cancel-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+</style>
+<script>
+var countdown = 2; // Tempo em segundos
+var redirectUrl = "https://api.whatsapp.com/send?phone=5519997973128&text=Ola,%20vim%20pelo%20Tiktok,%20gostaria%20de%20saber%20mais%20sobre%20o%20Gympass.."; // URL de destino
+
+function updateCountdown() {
+    var countdownElement = document.getElementById("countdown");
+    countdownElement.innerHTML = countdown;
+    countdown--;
+    if (countdown < 0) {
+        window.location.href = redirectUrl;
+    }
+}
+
+var countdownInterval = setInterval(updateCountdown, 1000);
+
+function cancelRedirection() {
+    clearInterval(countdownInterval);
+    var countdownElement = document.getElementById("countdown");
+    countdownElement.innerHTML = "Redirecionamento cancelado.";
+    var cancelButton = document.getElementById("cancelButton");
+    cancelButton.style.display = "none"; // Esconde o botão após o cancelamento
+}
+</script>
+</head>
+<body>
+<div style="text-align: center; padding: 20px;">
+    <p>A página será redirecionada para o WhatsApp em <span id="countdown">5</span> segundos...</p>
+    <button class="cancel-button" id="cancelButton" onclick="cancelRedirection();">Cancelar</button>
+</div>
+</body>
+</html>
+	
 <!-- Otimização de mecanismos de pesquisa feita por Rank Math - https://s.rankmath.com/home -->
 <title>Tenha acesso ao Gympass Pessoa Física | Acesso Gym Vitalício</title><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Montserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap" media="print" onload="this.media='all'" /><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap" /></noscript><link rel="stylesheet" href="https://acessogym.com/wp-content/cache/min/1/f216baab84744127cfc6796acdd0ebeb.css" media="all" data-minify="1" />
 <meta name="description" content="Seja livre para se exercitar em qualquer lugar do mundo com o Gympass Pessoa Física. Liberamos seu acesso vitalício em menos de 5 minutos."/>
